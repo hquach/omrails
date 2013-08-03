@@ -2,7 +2,7 @@ class Pin < ActiveRecord::Base
   attr_accessible :description, :image
 
   belongs_to :user
-  has_attached_file :image #, styles: { medium: "320x240>" }
+  has_attached_file :image, styles: { medium: "300x200>" }
 
   validates :description, presence: true, length: { :mininum => 1, :maximum => 500 }
 	validates :user_id, presence: true
